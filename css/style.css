@@ -1,17 +1,15 @@
-html {
-  font-size: 10px;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,400,500&display=swap");
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 img {
   width: 100%;
+  height: auto;
 }
 
 li {
@@ -23,11 +21,33 @@ a {
   color: black;
 }
 
-.flexCenter, .footer, .header .msg-top {
+.flexCenter, .footer, .header .user__carrito-number, .header .msg-top {
   display: flex;
   align-items: center;
 }
 
+html {
+  font-size: 10px;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 8px;
+  }
+}
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 6px;
+  }
+}
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 5px;
+  }
+}
 .header {
   text-transform: uppercase;
 }
@@ -47,7 +67,7 @@ a {
 }
 @media (min-width: 768px) {
   .header__bar {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.5fr 2fr 1fr;
   }
 }
 .header__logo {
@@ -69,7 +89,8 @@ a {
 }
 .header .user {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .header .user__carrito {
@@ -77,16 +98,17 @@ a {
   align-items: center;
 }
 .header .user__carrito-number {
+  justify-content: center;
   text-align: center;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   margin-left: 0.5rem;
   background-color: #d10000;
 }
 
 .main .banner {
-  padding: 4rem 12rem;
+  padding: 4% 8%;
   background-color: #FF9A16;
 }
 .main .sushi__grid {
@@ -99,11 +121,23 @@ a {
   gap: 0.5rem;
   grid-template-areas: "m1 p1" "m2 p2" "p3 m3" "p4 m4";
 }
+.main .sushi__grid .m0 {
+  grid-area: m0;
+}
+.main .sushi__grid .p0 {
+  grid-area: p0;
+}
 .main .sushi__grid .m1 {
   grid-area: m1;
 }
 .main .sushi__grid .p1 {
   grid-area: p1;
+}
+.main .sushi__grid .m2 {
+  grid-area: m2;
+}
+.main .sushi__grid .p2 {
+  grid-area: p2;
 }
 .main .sushi__grid .m3 {
   grid-area: m3;
@@ -111,17 +145,35 @@ a {
 .main .sushi__grid .p3 {
   grid-area: p3;
 }
-.main .sushi__grid .p2 {
-  grid-area: p2;
-}
-.main .sushi__grid .m2 {
-  grid-area: m2;
+.main .sushi__grid .m4 {
+  grid-area: m4;
 }
 .main .sushi__grid .p4 {
   grid-area: p4;
 }
-.main .sushi__grid .m4 {
-  grid-area: m4;
+.main .sushi__grid .m5 {
+  grid-area: m5;
+}
+.main .sushi__grid .p5 {
+  grid-area: p5;
+}
+.main .sushi__grid .m6 {
+  grid-area: m6;
+}
+.main .sushi__grid .p6 {
+  grid-area: p6;
+}
+.main .sushi__grid .m7 {
+  grid-area: m7;
+}
+.main .sushi__grid .p7 {
+  grid-area: p7;
+}
+.main .sushi__grid .m8 {
+  grid-area: m8;
+}
+.main .sushi__grid .p8 {
+  grid-area: p8;
 }
 .main .sushi__grid .sushi__img img {
   width: 100%;

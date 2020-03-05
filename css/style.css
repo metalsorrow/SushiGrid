@@ -1,0 +1,152 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flexCenter, .footer, .header .msg-top {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  text-transform: uppercase;
+}
+.header .msg-top {
+  background-color: black;
+  height: 8vh;
+  color: white;
+}
+.header .msg-top > * {
+  padding: 0 2rem;
+}
+.header__bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header__bar {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+.header__logo {
+  display: inline-block;
+  width: 10em;
+  margin: 0 auto;
+}
+.header .navegation__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .header .navegation__items {
+    width: 80%;
+    flex-direction: row;
+  }
+}
+.header .user {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .user__carrito {
+  display: flex;
+  align-items: center;
+}
+.header .user__carrito-number {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  background-color: #d10000;
+}
+
+.main .banner {
+  padding: 4rem 12rem;
+  background-color: #FF9A16;
+}
+.main .sushi__grid {
+  display: grid;
+  width: 80%;
+  margin: 2rem auto;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas: "m1 p1" "m2 p2" "p3 m3" "p4 m4";
+}
+.main .sushi__grid .m1 {
+  grid-area: m1;
+}
+.main .sushi__grid .p1 {
+  grid-area: p1;
+}
+.main .sushi__grid .m3 {
+  grid-area: m3;
+}
+.main .sushi__grid .p3 {
+  grid-area: p3;
+}
+.main .sushi__grid .p2 {
+  grid-area: p2;
+}
+.main .sushi__grid .m2 {
+  grid-area: m2;
+}
+.main .sushi__grid .p4 {
+  grid-area: p4;
+}
+.main .sushi__grid .m4 {
+  grid-area: m4;
+}
+.main .sushi__grid .sushi__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .sushi__grid .sushi__producto p {
+  font-weight: lighter;
+}
+@media (min-width: 768px) {
+  .main .sushi__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "m1 p1 m2 p2" "p3 m3 p4 m4";
+  }
+}
+
+.footer {
+  background-color: #FF9A16;
+  height: 8vh;
+}
+.footer p {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

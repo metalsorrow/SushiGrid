@@ -1,0 +1,143 @@
+@import 'variables';
+@import 'initialize';
+@import 'inherent';
+@import 'mixin';
+
+
+.header{
+    text-transform: uppercase;
+
+    .msg-top{
+        @extend .flexCenter;
+        background-color: $colorDark;
+        height: 8vh ;
+        color: $colorLight;
+        & > *{
+            padding: 0 2rem;
+        }
+    }
+
+    &__bar{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 2rem;
+        //Responsive nav
+        @media (min-width: 768px){
+            &{
+                grid-template-columns: 1fr 2fr 1fr;
+                
+            }
+        }
+    }
+    
+    &__logo{
+        display: inline-block;
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .navegation{
+        &__items{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            @media (min-width: 768px){
+                &{
+                    width: 80%;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    .user{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &__carrito{
+            display: flex;
+            align-items: center;
+            
+            &-number{
+                text-align: center;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                margin-left: 0.5rem;
+                background-color: $colorImportant;
+            }
+        }
+    }
+    
+
+}
+
+.main{
+    .banner{
+        padding: 4rem 12rem;
+        background-color: $colorPrimary;
+    }
+
+    .sushi__grid {
+        display: grid;
+        width: 80%;
+        margin: 2rem auto;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5rem;
+        grid-template-areas: "m1 p1" "m2 p2" "p3 m3" "p4 m4";
+        
+        .m1 { grid-area: m1; }
+        
+        .p1 { grid-area: p1; }
+        
+        .m3 { grid-area: m3; }
+        
+        .p3 { grid-area: p3; }
+        
+        .p2 { grid-area: p2; }
+        
+        .m2 { grid-area: m2; }
+        
+        .p4 { grid-area: p4; }
+        
+        .m4 { grid-area: m4; }
+
+
+        .sushi__img{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sushi__producto{
+            p{
+                font-weight: lighter;
+            }
+        }
+
+        @media (min-width: 768px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "m1 p1 m2 p2" "p3 m3 p4 m4";
+        }
+    }
+}
+
+.footer{
+    @extend .flexCenter;
+    background-color: $colorPrimary;
+    height: 8vh;
+    p{
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+    }
+}
